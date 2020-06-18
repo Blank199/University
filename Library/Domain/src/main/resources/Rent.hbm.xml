@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Rent" table = "Inchirieri">
+
+        <composite-id>
+            <key-property name="clientID" column="ClientId" />
+            <key-property name="bookID" column="CarteId"  />
+            <key-property name="librarianID" column="BibliotecarId"  />
+
+        </composite-id>
+
+        <property name = "rentDate" column = "DataInchiriere" type = "java.util.Date"/>
+        <property name = "bookCondition" column = "StareReturnare" type = "string" />
+
+    </class>
+</hibernate-mapping>

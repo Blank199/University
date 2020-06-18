@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Client" table = "Clienti">
+
+        <id name = "id" type = "integer" column = "ClientId">
+            <generator class="native"/>
+        </id>
+
+        <property name = "username" column = "Username" type = "string"/>
+        <property name = "password" column = "Pass" type = "string"/>
+        <property name = "cnp" column = "Cnp" type = "string"/>
+        <property name = "name" column = "Nume" type = "string"/>
+        <property name = "adress" column = "Adresa" type = "string"/>
+        <property name = "phone" column = "Telefon" type = "string"/>
+
+    </class>
+</hibernate-mapping>

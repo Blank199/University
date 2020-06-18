@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Book" table = "Carti">
+
+        <id name = "id" type = "integer" column = "CarteId">
+            <generator class="native"/>
+        </id>
+
+        <property name = "title" column = "Titlu" type = "string"/>
+        <property name = "author" column = "Autor" type = "string"/>
+        <property name = "rentalStatus" column = "Stare_Inchiriere" type = "string" />
+        <property name = "bookCondition" column = "Stare_Carte" type = "string"/>
+
+    </class>
+</hibernate-mapping>

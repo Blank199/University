@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table" prefHeight="596.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="rentStatusColumn" prefWidth="100.0" text="Stare Inchiriere" />
+            <TableColumn fx:id="bookStatusColumn" prefWidth="76.0" text="Stare Carte" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nameText" layoutX="492.0" layoutY="125.0" />
+      <TextField fx:id="authorText" layoutX="492.0" layoutY="163.0" />
+      <Label layoutX="408.0" layoutY="129.0" text="Nume" />
+      <Label layoutX="409.0" layoutY="167.0" text="Autor" />
+      <Button fx:id="addBtn" layoutX="491.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="44.0" prefWidth="75.0" text="Adauga" />
+      <Button fx:id="delBtn" layoutX="586.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleDel" prefHeight="44.0" prefWidth="75.0" text="Sterge" />
+      <Button fx:id="modBtn" layoutX="678.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="44.0" prefWidth="75.0" text="Modifica" />
+      <Button fx:id="logoutBtn" layoutX="733.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+      <TextField fx:id="bookStatusText" layoutX="492.0" layoutY="205.0" />
+      <Label layoutX="411.0" layoutY="209.0" text="Stare Carte" />
+   </children>
+</AnchorPane>
