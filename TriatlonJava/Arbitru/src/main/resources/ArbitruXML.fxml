@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArbitruController">
+   <children>
+      <TableView fx:id="tabelParticipanti" prefHeight="547.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="idConcurentiC" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="numeConcurentiC" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="punctajConcurentiC" prefWidth="75.0" text="Puncte" />
+        </columns>
+      </TableView>
+      <Label layoutX="294.0" layoutY="157.0" text="ID concurent" />
+      <Label layoutX="309.0" layoutY="187.0" text="Punctaj" />
+      <TextField fx:id="idConcurentText" layoutX="388.0" layoutY="153.0" />
+      <TextField fx:id="punctajText" layoutX="388.0" layoutY="183.0" />
+      <Button layoutX="312.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleAdaugaRezultat" text="Adauga rezultat" />
+      <TableView fx:id="tabelRaport" layoutX="595.0" prefHeight="547.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="idConcurentP" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="numeConcurentP" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="puncteConcurentP" prefWidth="75.0" text="Puncte" />
+        </columns>
+      </TableView>
+      <Button layoutX="510.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+   </children>
+</AnchorPane>

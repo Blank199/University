@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':Domain')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.hibernate:hibernate-core:5.4.14.Final'
+    compile 'org.springframework:spring-context:5.0.4.RELEASE'
+    compile group:'org.xerial', name:'sqlite-jdbc', version:'3.30.1'
+}

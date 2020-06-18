@@ -1,0 +1,9 @@
+rootProject.name = 'Lab5_tema'
+include 'Arbitru'
+include 'Domain'
+include 'Network'
+include 'Repository'
+include 'Server'
+include 'Services'
+include 'TriatlonRest'
+

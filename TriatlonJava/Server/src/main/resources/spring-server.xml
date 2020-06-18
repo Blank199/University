@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="repoArbitru" class="RepoArbitru"/>
+    <bean id="repoConcurent" class="RepoConcurent"/>
+    <bean id="repoRezultat" class="RepoRezultat"/>
+
+    <bean id="triatlonService" class="TriatlonServicesSyn">
+        <constructor-arg index="0" ref="repoArbitru"/>
+        <constructor-arg index="1" ref="repoRezultat"/>
+        <constructor-arg index="2" ref="repoConcurent"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+
+        <property name="serviceName" value="Triatlon"/>
+        <property name="service" ref="triatlonService"/>
+        <property name="serviceInterface" value="ITriatlonService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+</beans>
